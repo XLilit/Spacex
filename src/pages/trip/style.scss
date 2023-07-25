@@ -1,0 +1,173 @@
+@import "src/assets/style/variables";
+@import "src/assets/style/mixin";
+
+$local-blue : #1D3164;
+.P-trip {
+  width       : 100%;
+  padding-top : 100px;
+
+
+  .P-trip-wrapper {
+    @include screen-max-width-1200 {
+      flex-wrap : wrap;
+    }
+
+    .P-trip-child {
+      width : 50%;
+      @include screen-max-width-1200 {
+        width  : 100%;
+        margin : 30px 0;
+      }
+
+      &:first-child {
+        .P-trip-space-person {
+          position : relative;
+          @include screen-max-width-380 {
+            width  : 280px;
+            height : 280px;
+          }
+
+          .P-trip-absolute-circle {
+
+            position         : absolute;
+            border-radius    : 50%;
+            background-color : $black;
+
+          }
+
+          .P-trip-circle-one {
+            width  : 200px;
+            height : 200px;
+            bottom : -100px;
+            left   : -200px;
+            @include screen-max-width-1200 {
+              left : -150px;
+            }
+            @include screen-max-width-767 {
+              width  : 100px;
+              height : 100px;
+              left   : -50px;
+              bottom : -50px;
+            }
+            @include screen-max-width-576 {
+              width  : 60px;
+              height : 60px;
+              left   : -30px;
+              bottom : -30px;
+            }
+            @include screen-max-width-380 {
+              width  : 30px;
+              height : 30px;
+              left   : 10px;
+              bottom : -30px;
+            }
+          }
+
+          .P-trip-circle-two {
+            width  : 114px;
+            height : 114px;
+            left   : 550px;
+            bottom : 10px;
+            @include screen-max-width-767 {
+              width  : 64px;
+              height : 64px;
+              left   : unset;
+              right  : -30px;
+              bottom : 10px;
+            }
+            @include screen-max-width-576 {
+              width  : 44px;
+              height : 44px;
+              right  : -20px;
+            }
+            @include screen-max-width-380 {
+              width  : 20px;
+              height : 20px;
+              right  : 10px;
+
+            }
+          }
+        }
+      }
+
+
+      .P-trip-space-person {
+        width               : 507px;
+        height              : 507px;
+        background-size     : cover;
+        background-repeat   : no-repeat;
+        background-position : center;
+        border-radius       : 50%;
+        @include screen-max-width-1200 {
+          margin : 0 auto;
+        }
+        @include screen-max-width-767 {
+          width  : 407px;
+          height : 407px;
+        }
+        @include screen-max-width-576 {
+          width  : 307px;
+          height : 307px;
+        }
+      }
+
+      .P-trip-title {
+        color      : $local-blue;
+        text-align : right;
+        margin     : 10px 0;
+        font-size  : 40px;
+      }
+
+      .P-trip-desc {
+        color       : $local-blue;
+        text-align  : justify;
+        margin      : 10px 0;
+        line-height : 28px;
+        font-size   : 18px;
+      }
+
+      .P-trip-btn {
+
+        display         : flex;
+        justify-content : flex-end;
+
+        button {
+          font-weight      : bold;
+          text-transform   : uppercase;
+          padding          : 10px 40px;
+          background-color : transparent;
+          border           : 1px solid $local-blue;
+
+          border-radius    : 20px;
+          transition       : $transition;
+
+          a {
+            color : $local-blue;
+          }
+
+          &:hover {
+            transform  : translateY(10px);
+            transition : $transition;
+          }
+        }
+
+      }
+    }
+
+
+  }
+
+
+  .P-trip-description {
+    padding-top : 150px;
+
+    p {
+      color       : $local-blue;
+      text-align  : justify;
+      margin      : 10px 0;
+      line-height : 28px;
+      font-size   : 18px;
+      padding     : 0 25px;
+    }
+  }
+}
